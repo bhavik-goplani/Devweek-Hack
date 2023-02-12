@@ -1,4 +1,5 @@
 <script>
+	import "smelte/src/tailwind.css" ;
 	export let name;
 </script>
 
