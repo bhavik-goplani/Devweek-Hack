@@ -8,6 +8,8 @@
 
 <main>
 	<h1>Homepage</h1>
+    <p>This page should show once a user is logged in.</p>
 	
-	<Button>Get Started</Button>
+	<Button>New Agenda</Button>
+    <Button>Notes Archive</Button>
 </main>

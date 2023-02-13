@@ -25,13 +25,14 @@
   
     $: selectedLabel = selectedItems.map(i => i.text).join(", ");
   
-    const label = "A select";
+    const label = "Select agenda template...";
   </script>
 
 
+<br>
 
 
-<p>Select may even be an autocomplete search component.</p>
-<small>Selected: {value3 || 'nothing'}</small>
+<small>{value3 || 'No option selected.'}</small>
 <Select bind:value={value3} outlined autocomplete {label} {items} />
+
 

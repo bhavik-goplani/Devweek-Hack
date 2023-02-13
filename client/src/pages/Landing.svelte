@@ -7,7 +7,8 @@
   
 
 <main>
-	<h1>Landing page</h1>
+	<h2>Landing page</h2>
+    <p>This page should show pre-authentication.</p>
 	
 	<Button>Get Started</Button>
 </main>

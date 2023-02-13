@@ -2,12 +2,15 @@
 	import "smelte/src/tailwind.css" ;
 	import Landing from "./pages/Landing.svelte";
   import Select from "./components/Select.svelte";
+  import NewAgenda from "./pages/NewAgenda.svelte";
+  import NotesArchive from "./pages/NotesArchive.svelte";
 	//export let name;
 </script>
 
 <main>
 	<h1>App.svelte heading</h1>
 	<Landing />
+
 	
 </main>
 
