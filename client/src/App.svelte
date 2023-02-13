@@ -1,11 +1,14 @@
 <script>
 	import "smelte/src/tailwind.css" ;
-	export let name;
+	import Landing from "./pages/Landing.svelte";
+  import Select from "./components/Select.svelte";
+	//export let name;
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>App.svelte heading</h1>
+	<Landing />
+	
 </main>
 
 <style>
@@ -15,6 +18,7 @@
 		max-width: 240px;
 		margin: 0 auto;
 	}
+	
 
 	h1 {
 		color: #ff3e00;
