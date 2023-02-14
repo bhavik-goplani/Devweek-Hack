@@ -5,6 +5,20 @@
   import NewAgenda from "./pages/NewAgenda.svelte";
   import NotesArchive from "./pages/NotesArchive.svelte";
 	//export let name;
+
+	import zoomSdk from "@zoom/appssdk"
+
+	async function configureApp() {
+		const configResponse = await zoomSdk.config({
+			popoutSize: {width: 480, height: 360},
+			capabilities: ["shareApp"]
+		})
+	}
+
+
+	configureApp()
+
+	
 </script>
 
 <main>
