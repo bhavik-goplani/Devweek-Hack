@@ -5,11 +5,19 @@
 	import NewAgenda from "./pages/NewAgenda.svelte";
 	import NotesArchive from "./pages/NotesArchive.svelte";
   import Select from "./components/Select.svelte";
-	import Authenticaton from "./pages/Authentication/Authentication.svelte"
-  import { detach } from "svelte/internal";
   import Authentication from "./pages/Authentication/Authentication.svelte";
 	//export let name;
+	import zoomSdk from "@zoom/appssdk"
 
+	async function configureApp() {
+		const configResponse = await zoomSdk.config({
+			popoutSize: {width: 480, height: 360},
+			capabilities: ["shareApp"]
+		})
+	}
+
+	configureApp()
+	
 
 	let Booleans=[true,false,false,false,false]
 
