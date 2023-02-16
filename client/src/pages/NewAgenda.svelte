@@ -3,7 +3,10 @@
       Button,
       Icon
     } from "smelte";
+  import { createEventDispatcher } from "svelte";
   import Select from "../components/Select.svelte";
+
+  const dispatchermodule = createEventDispatcher();
   </script>
   
 
@@ -14,4 +17,5 @@
 	
 	
     <Button>Next</Button>
+    <Button on:click={()=>{dispatchermodule("navigate",1)}}>Home</Button>
 </main>

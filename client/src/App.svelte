@@ -1,15 +1,62 @@
 <script>
 	import "smelte/src/tailwind.css" ;
 	import Landing from "./pages/Landing.svelte";
+	import Home from "./pages/Home.svelte";
+	import NewAgenda from "./pages/NewAgenda.svelte";
+	import NotesArchive from "./pages/NotesArchive.svelte";
   import Select from "./components/Select.svelte";
-  import NewAgenda from "./pages/NewAgenda.svelte";
-  import NotesArchive from "./pages/NotesArchive.svelte";
+	import Authenticaton from "./pages/Authentication/Authentication.svelte"
+  import { detach } from "svelte/internal";
+  import Authentication from "./pages/Authentication/Authentication.svelte";
 	//export let name;
+
+
+	let Booleans=[true,false,false,false,false]
+
+
+	function navigator(event)
+	{
+		for(let i=0;i<Booleans.length;i++)
+		{
+			if(i!=event.detail)
+			{
+				Booleans[i]=false
+			}
+			else
+			{
+				Booleans[i]=true
+			}
+		}
+	}
 </script>
 
 <main>
-	<h1>App.svelte heading</h1>
-	<Landing />
+	
+
+	{#if Booleans[0]}
+		<Landing on:navigate={(e)=>{navigator(e)}}/>
+		
+	{/if}
+
+	{#if Booleans[1]}
+		<Home on:navigate={(e)=>{navigator(e)}} />
+		
+	{/if}
+	{#if Booleans[2]}
+		<NewAgenda on:navigate={(e)=>{navigator(e)}}/>
+		
+	{/if}
+	{#if Booleans[3]}
+		<NotesArchive on:navigate={(e)=>{navigator(e)}} />
+		
+	{/if}
+
+	{#if Booleans[4]}
+		<Authentication on:navigate={(e)=>{navigator(e)}}/>
+		
+	{/if}
+
+
 
 	
 </main>
