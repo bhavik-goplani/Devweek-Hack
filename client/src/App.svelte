@@ -20,7 +20,7 @@
 	
 
 	let Booleans=[true,false,false,false,false]
-
+	
 
 	function navigator(event)
 	{
@@ -39,7 +39,7 @@
 </script>
 
 <main>
-	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	{#if Booleans[0]}
 		<Landing on:navigate={(e)=>{navigator(e)}}/>
@@ -70,6 +70,7 @@
 </main>
 
 <style>
+	
 	
 	main {
 		text-align: center;
