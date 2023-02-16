@@ -18,6 +18,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "sirv-cli": "^2.0.0"
+    "@zoom/appssdk": "^0.16.8",
+    "sirv-cli": "^2.0.0",
+    "smelte": "^1.1.8"
   }
 }
