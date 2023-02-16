@@ -19,7 +19,7 @@ const dbo = require("./db/conn");
 const userRouter = require('./routes/users')
 app.use('/users', userRouter)
 
-const gptRouter = require('./routes/gpt')
+const gptRouter = require('./routes/gpt/gpt')
 app.use('gpt', gptRouter)
 
 app.listen(port, () => {
