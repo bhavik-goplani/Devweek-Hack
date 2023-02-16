@@ -1,15 +1,10 @@
-let inputText = '';
-let generatedText = '';
 
-const generateText = async () => {
-  const response = await fetch('/api/gpt', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ inputText })
-  });
+const OpenAI = require('openai')
+const {Configuration, OpenAIApi} = OpenAI
 
-  const data = await response.json();
-  generatedText = data.generatedText;
-};
+
+const configuration = new Configuration({
+    organization: "org-CtbyLQVWPne6XC9sQfuMqGNf",
+    apiKey: process.env.GPT,
+});
+const openai = new OpenAIApi(configuration);
