@@ -23,8 +23,8 @@
 <style>
   .select-box{
     display: flex;
-    align-items: center;
-    justify-items: center;
+    justify-content: center;
+
     size: 10%;
     margin-top: 10%;
     margin-bottom: 10%;
