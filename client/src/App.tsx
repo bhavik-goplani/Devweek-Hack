@@ -26,7 +26,7 @@ function App() {
             h6: { fontWeight: 900 },
           },
         },
-        colorScheme: "dark",
+        colorScheme: "light",
       }}>
 
         <Landing/>
