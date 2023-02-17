@@ -1,6 +1,10 @@
 import { List, Box } from "@mantine/core";
 
 function AgendaDataNestedList() {
+  const nestedItems = Array.from({ length: 10 }, (_, i) => (
+    <List.Item key={i}>First order item</List.Item>
+  ));
+
   return (
     <Box
       sx={(theme) => ({
@@ -10,6 +14,7 @@ function AgendaDataNestedList() {
       })}
     >
       <List listStyleType="disc">
+        {nestedItems}
         <List.Item>First order item</List.Item>
         <List.Item>First order item</List.Item>
         <List.Item>
