@@ -8,13 +8,12 @@ import Home from "./pages/Home";
 import NewAgenda from "./pages/NewAgenda";
 import NotesArchive from "./pages/NotesArchive";
 import Authentication from "./pages/Authentication";
+import DisplayAgenda from "./pages/DisplayAgenda";
 
 import { MantineProvider, Text } from "@mantine/core";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import NewAgenda from "./pages/NewAgenda";
-import NotesArchive from "./pages/NotesArchive";
-import DisplayAgenda from "./pages/DisplayAgenda";
+
+
 
 function App() {
 
@@ -43,6 +42,7 @@ function App() {
           <Route path="/NewAgenda" element={<NewAgenda />} />
           <Route path="/NotesArchive " element={<NotesArchive  />} />
           <Route path="/Authentication" element={<Authentication />} />
+          <Route path="/DisplayAgenda" element={<DisplayAgenda />} />
         </Routes>
         
       </MantineProvider>
