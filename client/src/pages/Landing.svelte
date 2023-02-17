@@ -10,7 +10,7 @@
   
 
 <main>
-	<h5 >Welcome to your agenda assistant</h5>
+	<h5 >Welcome to your new agenda assistant.</h5>
     
 	
 	<Button on:click={()=>{dispatcherModule("navigate",4)}}>Get Started</Button>

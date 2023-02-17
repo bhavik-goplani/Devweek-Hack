@@ -12,7 +12,7 @@
   
 
 <main>
-	<h1>Authentication</h1>
+	<h5>Authentication</h5>
 	
 	<Button on:click={()=>{dispatchermodule("navigate",1)}}>Bypass Authentication</Button>
 </main>

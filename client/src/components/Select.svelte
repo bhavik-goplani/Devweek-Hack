@@ -1,14 +1,9 @@
-
-
 <script>
-  import { Select, Checkbox } from "smelte";
+  import { Select } from "smelte";
 
- 
-  let selectedValue = "";
-
+  let selectedValue = "General";
 
   let showList = false;
-
 
   const items = [
     { value: 1, text: "Sprint" },
@@ -20,15 +15,21 @@
   let selectedItems = [];
 
   function toggle(i) {
-    return v => v.detail
-      ? selectedItems.push(i)
-      : selectedItems = selectedItems.filter(si => si !== i);
+    return (v) =>
+      v.detail
+        ? selectedItems.push(i)
+        : (selectedItems = selectedItems.filter((si) => si !== i));
   }
 
-  $: selectedLabel = selectedItems.map(i => i.text).join(", ");
-
-  const label = "Select an agenda type.";
+  const label = "Select an agenda type.  ";
 </script>
 
+<div class="select-holder">
+  <Select bind:value={selectedValue} outlined autocomplete {label} {items} />
+</div>
 
-<Select bind:value={selectedValue} outlined autocomplete {label} {items} />
+<style>
+  .select-holder{
+    font-size: small;
+  }
+</style>
