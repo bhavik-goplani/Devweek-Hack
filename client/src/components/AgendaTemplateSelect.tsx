@@ -5,11 +5,11 @@ import { Select } from '@mantine/core';
 function AgendaTemplateSelect() {
   return (
     <Select
-      label="Your favorite framework/library"
-      placeholder="Pick one"
+      label=""
+      placeholder="Select agenda template..."
       searchable
       nothingFound="No options"
-      data={['React', 'Angular', 'Svelte', 'Vue']}
+      data={['Sprint', 'Standup', 'General']}
     />
   );
 }

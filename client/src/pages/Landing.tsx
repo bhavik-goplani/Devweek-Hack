@@ -3,7 +3,7 @@ import {Text} from "@mantine/core";
 
 const Landing = () => {
     return (
-        <Text>Landing</Text>
+        <Text>Welcome to your new agenda assistant.</Text>
         
     )
 }

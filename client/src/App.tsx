@@ -7,6 +7,8 @@ import Landing from "./pages/Landing";
 import { MantineProvider, Text } from "@mantine/core";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import NewAgenda from "./pages/NewAgenda";
+import NotesArchive from "./pages/NotesArchive";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,6 +31,8 @@ function App() {
         },
         colorScheme: "light",
       }}>
+        <Home/>
+        <NewAgenda/>
         <Routes>
           <Route path="/" element={<Landing />} />
         </Routes>
