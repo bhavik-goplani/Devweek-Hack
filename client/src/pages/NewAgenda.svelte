@@ -2,25 +2,32 @@
   import { Button, Icon } from "smelte";
   import { createEventDispatcher } from "svelte";
   import Select from "../components/Select.svelte";
+  import { writable } from 'svelte/store'
+  
+  /*import {
+    SprintAgenda,
+    GeneralAgenda,
+    CustomAgenda,
+    StandupAgenda,
+  } from "../components/agendaComponents/AgendaModule";*/
   import Agenda from "../components/Agenda.svelte";
 
-  import { TextField } from "smelte";
+
 
   const dispatchermodule = createEventDispatcher();
 
-  export let title;
+
+  export let selectedAgendaTemplate;
 </script>
 
 <main>
   <h4>New Meeting Agenda</h4>
 
   <div class="select-box">
-    <Select />
+    <Select bind:value={selectedAgendaTemplate}/>
   </div>
 
-  <div class="textfield-box">
-    <TextField label="Agenda title" outlined bind:value="{title}"/>
-  </div>
+
 
   <Button
     on:click={() => {
@@ -44,13 +51,4 @@
     margin-bottom: 10%;
   }
 
-  .textfield-box {
-    display: flex;
-    justify-content: center;
-    font-size: small;
-
-    size: 5%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-  }
 </style>
