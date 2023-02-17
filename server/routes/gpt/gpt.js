@@ -7,8 +7,17 @@ const port = 3000
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/', (req,res) =>{
-    res.send("hello world")
+app.get('/', async (req,res) =>{
+    const response = await openai.createCompletion({
+        model: "text-davinci-003",
+        prompt: "Say this text",
+        max_tokens:7,
+        temperatue:0
+    })
+    console.log(response.data)
+    res.json({
+        message: "Hello world"
+    })
 
 })
 
