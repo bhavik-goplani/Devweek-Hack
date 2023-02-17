@@ -19,7 +19,7 @@ const userRouter = require('./routes/users')
 app.use('/users', userRouter)
 
 const gptRouter = require('./routes/gpt')
-app.use('gpt', gptRouter)
+app.use('/gpt', gptRouter)
 
 app.listen(port, () => {
     dbo.connectToServer(function (err) {
