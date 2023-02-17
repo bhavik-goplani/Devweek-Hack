@@ -29,8 +29,10 @@ function App() {
         },
         colorScheme: "light",
       }}>
-
-        <Landing/>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+        </Routes>
+        
       </MantineProvider>
 
       
