@@ -2,8 +2,13 @@ import { List, Box } from "@mantine/core";
 
 function AgendaDataNestedList() {
   return (
-    <Box sx={(theme) => ({textAlign: 'left', alignContent: 'center',
-    padding: theme.spacing.xl})}>
+    <Box
+      sx={(theme) => ({
+        textAlign: "left",
+        alignContent: "center",
+        padding: theme.spacing.xl,
+      })}
+    >
       <List listStyleType="disc">
         <List.Item>First order item</List.Item>
         <List.Item>First order item</List.Item>
