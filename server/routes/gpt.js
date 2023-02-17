@@ -1,13 +1,7 @@
 const express = require('express')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-const app = express()
-const port = 3000
+const router = express.Router()
 
-app.use(bodyParser.json())
-app.use(cors())
-
-app.get('/', async (req,res) =>{
+router.get('/', async (req,res) =>{
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: "Say this text",
@@ -15,16 +9,15 @@ app.get('/', async (req,res) =>{
         temperatue:0
     })
     console.log(response.data)
+    if (response.data.choices[0].text){
+        res.json({message: response.data.choices[0].text})
+    }
     res.json({
         message: "Hello world"
     })
 
 })
 
-app.listen(port, ()=> {
-
-    console.log("example app listening")
-})
 
 
 const OpenAI = require('openai')
@@ -35,9 +28,5 @@ const configuration = new Configuration({
     organization: "org-CtbyLQVWPne6XC9sQfuMqGNf",
     apiKey: process.env.GPT,
 });
-
 const openai = new OpenAIApi(configuration);
-
-
-const router = express.Router()
 module.exports = router
