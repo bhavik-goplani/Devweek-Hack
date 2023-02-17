@@ -77,9 +77,11 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
+		color: black;
+		font-family: 'georgia';
+		font-size: 2em;
 	}
 	
-
 	h1 {
 		color: #ff3e00;
 		text-transform: uppercase;

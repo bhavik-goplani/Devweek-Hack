@@ -1,21 +1,32 @@
 <script>
-    import {
-      Button,
-      Icon
-    } from "smelte";
+  import { Button, Icon } from "smelte";
   import { createEventDispatcher } from "svelte";
   import Select from "../components/Select.svelte";
 
   const dispatchermodule = createEventDispatcher();
-  </script>
-  
+</script>
 
 <main>
-	<h2>New Agenda page</h2>
-    <p>This page is where the user should select their agenda.</p>
+  <h4>New Meeting Agenda</h4>
+  <div class="select-box">
     <Select />
-	
-	
-    <Button>Next</Button>
-    <Button on:click={()=>{dispatchermodule("navigate",1)}}>Home</Button>
+  </div>
+
+  <Button
+    on:click={() => {
+      dispatchermodule("navigate", 1);
+    }}>Home</Button
+  >
+  <Button>Next</Button>
 </main>
+
+<style>
+  .select-box{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    size: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+</style>
