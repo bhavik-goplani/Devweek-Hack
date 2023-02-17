@@ -1,8 +1,13 @@
 import { useState } from "react";
 import React from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+
+
 import Landing from "./pages/Landing";
+import Home from "./pages/Home";
+import NewAgenda from "./pages/NewAgenda";
+import NotesArchive from "./pages/NotesArchive";
+import Authentication from "./pages/Authentication";
 
 import { MantineProvider, Text } from "@mantine/core";
 import { Routes, Route } from "react-router-dom";
@@ -12,7 +17,6 @@ import NotesArchive from "./pages/NotesArchive";
 import DisplayAgenda from "./pages/DisplayAgenda";
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <MantineProvider
@@ -35,6 +39,10 @@ function App() {
        
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/NewAgenda" element={<NewAgenda />} />
+          <Route path="/NotesArchive " element={<NotesArchive  />} />
+          <Route path="/Authentication" element={<Authentication />} />
         </Routes>
         
       </MantineProvider>
