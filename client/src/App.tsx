@@ -6,6 +6,7 @@ import Landing from "./pages/Landing";
 
 import { MantineProvider, Text } from "@mantine/core";
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   const [count, setCount] = useState(0);
