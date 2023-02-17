@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000
 app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
-app.use(require("./routes/record"))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
@@ -19,7 +18,7 @@ const dbo = require("./db/conn");
 const userRouter = require('./routes/users')
 app.use('/users', userRouter)
 
-const gptRouter = require('./routes/gpt/gpt')
+const gptRouter = require('./routes/gpt')
 app.use('gpt', gptRouter)
 
 app.listen(port, () => {
