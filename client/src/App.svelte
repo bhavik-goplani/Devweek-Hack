@@ -1,97 +1,111 @@
 <script>
-	import "smelte/src/tailwind.css" ;
-	import Landing from "./pages/Landing.svelte";
-	import Home from "./pages/Home.svelte";
-	import NewAgenda from "./pages/NewAgenda.svelte";
-	import NotesArchive from "./pages/NotesArchive.svelte";
+  import "smelte/src/tailwind.css";
+  import Landing from "./pages/Landing.svelte";
+  import Home from "./pages/Home.svelte";
+  import NewAgenda from "./pages/NewAgenda.svelte";
+  import NotesArchive from "./pages/NotesArchive.svelte";
   import Select from "./components/Select.svelte";
   import Authentication from "./pages/Authentication/Authentication.svelte";
-	//export let name;
-	import zoomSdk from "@zoom/appssdk"
+  //export let name;
+  import zoomSdk from "@zoom/appssdk";
+  import DisplayAgenda from "./pages/DisplayAgenda.svelte";
 
-	async function configureApp() {
-		const configResponse = await zoomSdk.config({
-			popoutSize: {width: 480, height: 360},
-			capabilities: ["shareApp"]
-		})
-	}
+  async function configureApp() {
+    const configResponse = await zoomSdk.config({
+      popoutSize: { width: 480, height: 360 },
+      capabilities: ["shareApp"],
+    });
+  }
 
-	configureApp()
-	
+  configureApp();
 
-	let Booleans=[true,false,false,false,false]
-	
+  let Booleans = [true, false, false, false, false, false];
 
-	function navigator(event)
-	{
-		for(let i=0;i<Booleans.length;i++)
-		{
-			if(i!=event.detail)
-			{
-				Booleans[i]=false
-			}
-			else
-			{
-				Booleans[i]=true
-			}
-		}
-	}
+  function navigator(event) {
+    for (let i = 0; i < Booleans.length; i++) {
+      if (i != event.detail) {
+        Booleans[i] = false;
+      } else {
+        Booleans[i] = true;
+      }
+    }
+  }
 </script>
 
 <main>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
 
-	{#if Booleans[0]}
-		<Landing on:navigate={(e)=>{navigator(e)}}/>
-		
-	{/if}
+  {#if Booleans[0]}
+    <Landing
+      on:navigate={(e) => {
+        navigator(e);
+      }}
+    />
+  {/if}
 
-	{#if Booleans[1]}
-		<Home on:navigate={(e)=>{navigator(e)}} />
-		
-	{/if}
-	{#if Booleans[2]}
-		<NewAgenda on:navigate={(e)=>{navigator(e)}}/>
-		
-	{/if}
-	{#if Booleans[3]}
-		<NotesArchive on:navigate={(e)=>{navigator(e)}} />
-		
-	{/if}
+  {#if Booleans[1]}
+    <Home
+      on:navigate={(e) => {
+        navigator(e);
+      }}
+    />
+  {/if}
+  {#if Booleans[2]}
+    <NewAgenda
+      on:navigate={(e) => {
+        navigator(e);
+      }}
+    />
+  {/if}
+  {#if Booleans[3]}
+    <NotesArchive
+      on:navigate={(e) => {
+        navigator(e);
+      }}
+    />
+  {/if}
 
-	{#if Booleans[4]}
-		<Authentication on:navigate={(e)=>{navigator(e)}}/>
-		
-	{/if}
+  {#if Booleans[4]}
+    <Authentication
+      on:navigate={(e) => {
+        navigator(e);
+      }}
+    />
+  {/if}
 
-
-
-	
+  {#if Booleans[5]}
+    <DisplayAgenda
+      on:navigate={(e) => {
+        navigator(e);
+      }}
+    />
+  {/if}
 </main>
 
 <style>
-	
-	
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-		color: black;
-		font-family: 'georgia';
-		font-size: 2em;
-	}
-	
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  main {
+    text-align: center;
+    padding: 1em;
+    max-width: 240px;
+    margin: 0 auto;
+    color: black;
+    font-family: "georgia";
+    font-size: 2em;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  h1 {
+    color: #ff3e00;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 100;
+  }
+
+  @media (min-width: 640px) {
+    main {
+      max-width: none;
+    }
+  }
 </style>

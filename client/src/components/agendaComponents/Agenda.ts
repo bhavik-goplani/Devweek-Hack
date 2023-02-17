@@ -1,4 +1,11 @@
 //emma started this, to revisit this later. 
+enum AgendaType {
+    sprint = 1,
+    standup = 2,
+    general = 3,
+    custom = 4,
+  }
+
 interface AgendaTemplate {
   name: string;
   type: AgendaType;
