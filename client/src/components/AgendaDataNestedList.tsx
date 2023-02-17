@@ -1,8 +1,8 @@
 import { List, Box } from "@mantine/core";
 
 function AgendaDataNestedList() {
-  const nestedItems = Array.from({ length: 10 }, (_, i) => (
-    <List.Item key={i}>First order item</List.Item>
+  const nestedItems = Array.from({ length: 3 }, (_, i) => (
+    <List.Item key={i}>Topic {i+1}</List.Item>
   ));
 
   return (
@@ -15,24 +15,24 @@ function AgendaDataNestedList() {
     >
       <List listStyleType="disc">
         {nestedItems}
-        <List.Item>First order item</List.Item>
-        <List.Item>First order item</List.Item>
+        <List.Item>Topic</List.Item>
+  
         <List.Item>
           First order item with list
           <List withPadding listStyleType="disc">
-            <List.Item>Nested item</List.Item>
-            <List.Item>Nested item</List.Item>
+            <List.Item>Details</List.Item>
+            <List.Item>Details</List.Item>
             <List.Item>
-              Nested item with list
+              Topic with details
               <List withPadding listStyleType="disc">
-                <List.Item>Event more nested</List.Item>
-                <List.Item>Event more nested</List.Item>
+                <List.Item>Details</List.Item>
+                <List.Item>Details</List.Item>
               </List>
             </List.Item>
-            <List.Item>Nested item</List.Item>
+            <List.Item>Details</List.Item>
           </List>
         </List.Item>
-        <List.Item>First order item</List.Item>
+        <List.Item>Topic</List.Item>
       </List>
     </Box>
   );

@@ -6,11 +6,12 @@ const NewAgenda = () => {
   return (
     <>
       <Text>New Agenda Template</Text>
-      <AgendaTemplateSelect />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <AgendaTemplateSelect />
+      </div>
       <a href="/DisplayAgenda">
         <Button>Next</Button>
       </a>
-      
     </>
   );
 };

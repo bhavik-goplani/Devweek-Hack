@@ -11,7 +11,6 @@ const DisplayAgenda = () => {
       </div>
       </a>
 
-
       <Text size="lg" style={{ marginTop: 20 }}>
         Meeting Agenda
       </Text>

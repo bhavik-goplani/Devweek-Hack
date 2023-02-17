@@ -3,15 +3,16 @@ import { Text, Button } from "@mantine/core";
 import TableScrollArea from "../components/AgendaArchiveTable";
 
 const NotesArchive = () => {
-
-    let archiveData: { name: string; email: string; company: string; }[] =[{name: 'emma', email: 'enassero', company: 'ku'}];
+  let archiveData: { name: string; email: string; company: string }[] = [
+    { name: "emma", email: "enassero", company: "ku" },
+  ];
   return (
     <>
       <Text>Notes Archive</Text>
 
-      <TableScrollArea data={archiveData}/>
+      <TableScrollArea data={archiveData} />
       <a href="/Home">
-      <Button>Back</Button>
+        <Button>Back</Button>
       </a>
     </>
   );
