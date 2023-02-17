@@ -10,6 +10,7 @@ function AgendaTemplateSelect() {
       searchable
       nothingFound="No options"
       data={['Sprint', 'Standup', 'General']}
+      style={{marginBottom:20, marginTop:20}}
     />
   );
 }

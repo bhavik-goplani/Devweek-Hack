@@ -5,7 +5,7 @@ const Landing = () => {
     return (
         <>
         
-        <Text>Welcome to your new agenda assistant.</Text>
+        <Text style={{marginBottom:10}}>Welcome to your new agenda assistant.</Text>
         <a href= "/Authentication">
             <Button>Get Started</Button>
         </a>

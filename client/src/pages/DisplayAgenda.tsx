@@ -5,8 +5,16 @@ import AgendaDataNestedList from "../components/AgendaDataNestedList";
 const DisplayAgenda = () => {
   return (
     <>
-      <Button>Back</Button>
-      <Text>Display Agenda</Text>
+     <a href= "/NewAgenda">
+      <div text-align="left">
+        <Button>Back</Button>
+      </div>
+      </a>
+
+
+      <Text size="lg" style={{ marginTop: 20 }}>
+        Meeting Agenda
+      </Text>
       <AgendaDataNestedList />
     </>
   );

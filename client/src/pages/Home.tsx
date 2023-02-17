@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Text, Button } from "@mantine/core";
+import { Stack, Text, Button } from "@mantine/core";
 import AgendaDataNestedList from "../components/AgendaDataNestedList";
 
 const Home = () => {
   return (
-    <>
+    <Stack sx={(theme) => ({  height: 300 })}>
       <Text>Home</Text>
       <a href= "/NewAgenda">
         <Button>New Agenda</Button>
@@ -13,7 +13,7 @@ const Home = () => {
         <Button>Notes Archive</Button>
       </a>
         
-    </>
+      </Stack>
   );
 };
 
