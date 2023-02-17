@@ -1,21 +1,54 @@
 <script>
-    import {
-      Button,
-      Icon
-    } from "smelte";
+  import { Button, Icon } from "smelte";
   import { createEventDispatcher } from "svelte";
   import Select from "../components/Select.svelte";
+  import { writable } from 'svelte/store'
+  
+  /*import {
+    SprintAgenda,
+    GeneralAgenda,
+    CustomAgenda,
+    StandupAgenda,
+  } from "../components/agendaComponents/AgendaModule";*/
+  import Agenda from "../components/Agenda.svelte";
+
+
 
   const dispatchermodule = createEventDispatcher();
-  </script>
-  
+
+
+  export let selectedAgendaTemplate;
+</script>
 
 <main>
-	<h2>New Agenda page</h2>
-    <p>This page is where the user should select their agenda.</p>
-    <Select />
-	
-	
-    <Button>Next</Button>
-    <Button on:click={()=>{dispatchermodule("navigate",1)}}>Home</Button>
+  <h4>New Meeting Agenda</h4>
+
+  <div class="select-box">
+    <Select bind:value={selectedAgendaTemplate}/>
+  </div>
+
+
+
+  <Button
+    on:click={() => {
+      dispatchermodule("navigate", 1);
+    }}>Home</Button
+  >
+  <Button
+    on:click={() => {
+      dispatchermodule("navigate", 5);
+    }}>Next</Button
+  >
 </main>
+
+<style>
+  .select-box {
+    display: flex;
+    justify-content: center;
+
+    size: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+</style>

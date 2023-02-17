@@ -10,8 +10,8 @@
   
 
 <main>
-	<h2>Landing page</h2>
-    <p>This page should show pre-authentication.</p>
+	<h5 >Welcome to your new agenda assistant.</h5>
+    
 	
 	<Button on:click={()=>{dispatcherModule("navigate",4)}}>Get Started</Button>
 </main>
