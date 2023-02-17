@@ -6,7 +6,8 @@ const Home = () => {
   return (
     <>
       <Text>Home</Text>
-      <AgendaDataNestedList></AgendaDataNestedList>
+      <Button>New Agenda</Button>
+      <Button>Notes Archive</Button>
     </>
   );
 };

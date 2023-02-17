@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NewAgenda from "./pages/NewAgenda";
 import NotesArchive from "./pages/NotesArchive";
+import DisplayAgenda from "./pages/DisplayAgenda";
 
 function App() {
   const [count, setCount] = useState(0);
