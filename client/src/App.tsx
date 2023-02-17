@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import Landing from "./pages/Landing";
 
 import { MantineProvider, Text } from "@mantine/core";
 import { Routes, Route } from "react-router-dom";
@@ -26,7 +27,12 @@ function App() {
           },
         },
         colorScheme: "dark",
-      }} children={undefined}    ></MantineProvider>
+      }}>
+
+        <Landing/>
+      </MantineProvider>
+
+      
   );
 }
 
