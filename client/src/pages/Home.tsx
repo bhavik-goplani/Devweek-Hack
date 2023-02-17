@@ -6,8 +6,13 @@ const Home = () => {
   return (
     <>
       <Text>Home</Text>
-      <Button>New Agenda</Button>
-      <Button>Notes Archive</Button>
+      <a href= "/NewAgenda">
+        <Button>New Agenda</Button>
+      </a>
+      <a href= "/NotesArchive">
+        <Button>Notes Archive</Button>
+      </a>
+        
     </>
   );
 };

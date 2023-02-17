@@ -13,7 +13,6 @@ import DisplayAgenda from "./pages/DisplayAgenda";
 import { MantineProvider, Text } from "@mantine/core";
 import { Routes, Route } from "react-router-dom";
 
-
 function App() {
 
   return (
@@ -41,6 +40,7 @@ function App() {
           <Route path="/NewAgenda" element={<NewAgenda />} />
           <Route path="/NotesArchive " element={<NotesArchive  />} />
           <Route path="/Authentication" element={<Authentication />} />
+          <Route path="/DisplayAgenda" element={<DisplayAgenda />} />
         </Routes>
         
       </MantineProvider>

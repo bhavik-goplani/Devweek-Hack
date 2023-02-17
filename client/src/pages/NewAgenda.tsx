@@ -7,7 +7,10 @@ const NewAgenda = () => {
     <>
       <Text>New Agenda Template</Text>
       <AgendaTemplateSelect />
-      <Button>Next</Button>
+      <a href="/DisplayAgenda">
+        <Button>Next</Button>
+      </a>
+      
     </>
   );
 };
