@@ -31,8 +31,7 @@ function App() {
         },
         colorScheme: "light",
       }}>
-        <Home/>
-        <NewAgenda/>
+       
         <Routes>
           <Route path="/" element={<Landing />} />
         </Routes>
