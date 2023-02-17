@@ -11,6 +11,9 @@ import Authentication from "./pages/Authentication";
 
 import { MantineProvider, Text } from "@mantine/core";
 import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import NewAgenda from "./pages/NewAgenda";
+import NotesArchive from "./pages/NotesArchive";
 
 function App() {
 
@@ -32,6 +35,7 @@ function App() {
         },
         colorScheme: "light",
       }}>
+       
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/Home" element={<Home />} />

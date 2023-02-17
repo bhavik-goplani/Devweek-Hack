@@ -1,10 +1,14 @@
 import * as React from "react";
-import {Text} from "@mantine/core";
+import { Text, Button } from "@mantine/core";
+import AgendaDataNestedList from "../components/AgendaDataNestedList";
 
 const Home = () => {
-    return (
-        <Text>Home</Text>
-    )
-}
+  return (
+    <>
+      <Text>Home</Text>
+      <AgendaDataNestedList></AgendaDataNestedList>
+    </>
+  );
+};
 
 export default Home;
