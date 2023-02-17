@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
 app.use(express.static('public'))
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: false}))
 
 // get driver connection
 const dbo = require("./db/conn");
